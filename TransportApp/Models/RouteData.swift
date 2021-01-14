@@ -5,18 +5,13 @@
 //  Created by Nipun Singh on 1/8/21.
 //
 
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
 //   let routeData = try? newJSONDecoder().decode(RouteData.self, from: jsonData)
 
 import Foundation
 
 // MARK: - RouteData
 struct RouteData: Codable {
-   // let geocodedWaypoints: [GeocodedWaypoint]
     let routes: [Route]
-    //let status: String
 }
 
 // MARK: - GeocodedWaypoint
@@ -28,13 +23,9 @@ struct GeocodedWaypoint: Codable {
 // MARK: - Route
 struct Route: Codable {
     let bounds: Bounds
-    let copyrights: String
     let fare: Fare
     let legs: [Leg]
     let overview_polyline: Polyline
-    let summary: String
-    let warnings: [String]
-    //let waypointOrder: [Any?]
 }
 
 // MARK: - Bounds
@@ -45,7 +36,6 @@ struct Bounds: Codable {
 // MARK: - Northeast
 struct Northeast: Codable {
     let lat, lng: Double
-    //let coordinates: Coordinates
 }
 
 struct Coordinates: Codable {
@@ -55,7 +45,7 @@ struct Coordinates: Codable {
 // MARK: - Fare
 struct Fare: Codable {
     let currency, text: String
-    let value: Int
+    let value: Float
 }
 
 // MARK: - Leg
@@ -67,7 +57,6 @@ struct Leg: Codable {
     let start_address: String
     let start_location: Northeast
     let steps: [Step]
-    //let trafficSpeedEntry, viaWaypoint: [Any?]
 }
 
 // MARK: - Time
@@ -86,13 +75,11 @@ struct Distance: Codable {
 struct Step: Codable {
     let distance, duration: Distance
     let end_location: Northeast
-    let html_instructions: String?
     let polyline: Polyline
     let start_location: Northeast
     let steps: [Step]?
     let travel_mode: String
     let transit_details: TransitDetails?
-    let maneuver: String?
 }
 
 // MARK: - Polyline
@@ -106,9 +93,7 @@ struct TransitDetails: Codable {
     let arrival_time: Time
     let departure_stop: Stop
     let departure_time: Time
-    let headsign: String
     let line: Line
-    let num_stops: Int
 }
 
 // MARK: - Stop
@@ -120,7 +105,7 @@ struct Stop: Codable {
 // MARK: - Line
 struct Line: Codable {
     let agencies: [Agency]
-    let color, name, short_name, text_color: String
+    let name, short_name: String
     let vehicle: Vehicle
 }
 
@@ -138,5 +123,6 @@ struct Vehicle: Codable {
 enum TravelMode {
     case transit
     case walking
+    case driving
 }
 

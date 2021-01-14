@@ -64,18 +64,42 @@
 		4229128B25A8F39B005C321C /* TransportApp */ = {
 			isa = PBXGroup;
 			children = (
-				4272441A25ABBD03001C053F /* Bus.swift */,
 				4229128C25A8F39B005C321C /* AppDelegate.swift */,
 				4229128E25A8F39B005C321C /* SceneDelegate.swift */,
-				4229129025A8F39B005C321C /* MainVC.swift */,
-				422912A125A92639005C321C /* RouteData.swift */,
-				422912A525AA6624005C321C /* RoutesTableVC.swift */,
-				4229129225A8F39B005C321C /* Main.storyboard */,
+				42B0FC4E25B0FC74006967E9 /* Models */,
+				42B0FC5025B0FC93006967E9 /* Views */,
+				42B0FC5125B0FCA1006967E9 /* Controllers */,
 				4229129525A8F3A3005C321C /* Assets.xcassets */,
 				4229129725A8F3A3005C321C /* LaunchScreen.storyboard */,
 				4229129A25A8F3A3005C321C /* Info.plist */,
 			);
 			path = TransportApp;
+			sourceTree = "<group>";
+		};
+		42B0FC4E25B0FC74006967E9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				422912A125A92639005C321C /* RouteData.swift */,
+				4272441A25ABBD03001C053F /* Bus.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		42B0FC5025B0FC93006967E9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4229129225A8F39B005C321C /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		42B0FC5125B0FCA1006967E9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4229129025A8F39B005C321C /* MainVC.swift */,
+				422912A525AA6624005C321C /* RoutesTableVC.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,7 +341,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.NipunSingh.TransportApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -337,7 +361,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.NipunSingh.TransportApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
