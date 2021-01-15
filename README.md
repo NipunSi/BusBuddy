@@ -12,25 +12,26 @@
 
 ### Bus Buddy
 
-Bus Buddy allows users to find bus routes to their destinations all across the Livermore-Amador Valley. Simply enter a destination and choose a route to see where you need to go and where your bus is.
+Bus Buddy allows users to find bus routes to destinations all across the Livermore-Amador Valley. Simply enter a destination and choose a route to see where you need to go and where your bus is.
 
 ### How it works
 
-The app uses the Google Directions API to find possible routes between the origin and destination addresses. From there is uses the 511.org Open Transit Data to find the locations of the required buses.
+The app uses the Google Directions API to find possible routes between the origin and destination addresses. From there it uses the 511.org Open Transit Data API to find the locations of the required buses.
 
 <br />
 
 ## Concepts used
 
 * MVC Architecture
-* Storyboard and AutoLayour
+* Storyboard and AutoLayout
 * Working with networking and JSON data
 * CoreLocation and MapKit
 
 ### Features:
 
+- [x] Use User's Location as Origin
 - [x] Route Selection
-- [x] Polyline and Annotations
+- [x] Map Polyline and Annotations
 - [x] Live Bus Location and Distance
 
 <br />
